@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RA Ihya' Ulumiddin: Fondasi Unggul Masa Depan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Smooth scrolling for navigation links with offset for fixed header
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                const headerOffset = 80;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add active class to current section in navigation
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if(pageYOffset >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    });
+    </script>
+</head>
+<body>
+    <header class="luxury-header">
+        <div class="container">
+            <h1 class="elegant-title">RA Ihya' Ulumiddin</h1>
+            <p class="elegant-subtitle">Membentuk Generasi Unggul Berakhlak Mulia</p>
+            <nav class="gold-nav">
+                <ul class="nav-list">
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#tentang-kami">Tentang Kami</a></li>
+                    <li><a href="#kurikulum">Kurikulum</a></li>
+                    <li><a href="#guru">Guru & Staf</a></li>
+                    <li><a href="#daftar">Daftar Sekarang</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="beranda" class="hero luxury-hero" style="background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 92, 153, 0.8)), url('https://placehold.co/1920x1080?text=Anak+Bahagia') center/cover;">
+            <div class="container">
+                <h2 class="hero-title">Selamat Datang di RA Ihya' Ulumiddin</h2>
+                <p class="hero-subtitle">Mewujudkan pendidikan anak usia dini yang islami, menyenangkan dan berkualitas.</p>
+                <a href="#daftar" class="btn btn-primary">Daftar Sekarang <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section id="tentang-kami" class="about">
+            <div class="container">
+                <h2>Tentang Kami</h2>
+                <p>RA Ihya' Ulumiddin berlokasi di <strong>Jl. Tempel Sukorejo I No.5C, Wonorejo, Kec. Tegalsari, Surabaya, Jawa Timur 60263</strong>. Kami berkomitmen menciptakan lingkungan belajar yang <strong>menyenangkan, aman, dan stimulatif</strong> untuk mengoptimalkan potensi setiap anak.</p>
+            </div>
+        </section>
+
+        <section id="kurikulum" class="curriculum">
+            <div class="container">
+                <h2>Kurikulum Terpadu Berbasis Karakter</h2>
+                <p>Kami bangga menerapkan kurikulum yang terintegrasi dan berpusat pada anak, dengan fondasi kuat pada nilai-nilai agama dan moral. Kurikulum kami mencakup:</p>
+                <ul>
+                    <li><strong>Kognitif:</strong> Berpikir logis, pemecahan masalah, kreativitas.</li>
+                    <li><strong>Motorik Halus & Kasar:</strong> Koordinasi dan keterampilan fisik.</li>
+                    <li><strong>Sosial-Emosional:</strong> Interaksi positif, empati, kemandirian.</li>
+                    <li><strong>Bahasa & Komunikasi:</strong> Kemampuan berbahasa dan komunikasi efektif.</li>
+                    <li><strong>Nilai Agama & Moral:</strong> Penanaman akhlak mulia dalam setiap kegiatan.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="guru" class="teachers">
+            <div class="container">
+                <h2>Guru & Staf Kami</h2>
+                <h3>Struktur Kepemimpinan</h3>
+                <ul>
+                    <li><strong>Kepala Sekolah:</strong> Ida Nursanty</li>
+                </ul>
+                <p>Tim pengajar kami terdiri dari guru-guru profesional, berpengalaman, dan sangat berdedikasi. Mereka menciptakan suasana belajar yang penuh kehangatan dan kasih sayang, memahami kebutuhan unik setiap anak, serta membimbing mereka dengan sabar dan antusias.</p>
+            </div>
+        </section>
+
+        <section id="daftar" class="register premium-register">
+            <div class="container">
+                <h2>Pendaftaran Siswa Baru</h2>
+                <div class="form-intro">
+                    <p class="lead-text">Bergabunglah bersama keluarga besar RA Ihya' Ulumiddin untuk mempersiapkan masa depan terbaik putra/putri Anda</p>
+                    <div class="opening-info">
+                        <p>Pendaftaran Tahun Ajaran <strong>2024/2025</strong> telah dibuka!</p>
+                        <p class="deadline">Batas pendaftaran: 30 Juni 2024</p>
+                    </div>
+                </div>
+                <div class="form-action">
+                    <div class="form-btn-container">
+                        <a href="[Link Formulir Pendaftaran Online Anda]" class="btn btn-register">
+                            <span class="btn-icon">
+                                <i class="fas fa-user-plus"></i>
+                            </span>
+                            <span class="btn-text">Isi Formulir Online</span>
+                        </a>
+                    </div>
+                    <div class="contact-options">
+                        <p class="alternative">Atau hubungi kami melalui:</p>
+                        <ul>
+                            <li>WhatsApp: 0812-3456-7890</li>
+                            <li>Email: admin@iyahya.sch.id</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontak" class="contact">
+            <div class="container">
+                <h2>Hubungi Kami</h2>
+                <p>Jl. Tempel Sukorejo I No.5C, Wonorejo, Kec. Tegalsari, Surabaya, Jawa Timur 60263</p>
+                <p>Email: [Email Sekolah Anda]</p>
+                <p>Telepon: [Nomor Telepon Sekolah Anda]</p>
+                <p>Jangan ragu menghubungi kami untuk informasi lebih lanjut.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="luxury-footer">
+        <div class="container">
+            <p>&copy; 2025 RA Ihya' Ulumiddin. Semua Hak Dilindungi.</p>
+        </div>
+    </footer>
+</body>
+</html>
